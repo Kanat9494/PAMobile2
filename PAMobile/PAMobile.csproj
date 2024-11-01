@@ -102,4 +102,10 @@
 		<CodesignProvision>PAMobileSigning</CodesignProvision>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+		<ProvisioningType>automatic</ProvisioningType>
+		<CodesignKey>iPhone Distribution</CodesignKey>
+		<CodesignProvision>PAMobileSigning</CodesignProvision>
+	</PropertyGroup>
+
 </Project>
