@@ -94,10 +94,18 @@
 		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 
+	<!--<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+		--><!-- Only needed when you have a need for entitlements --><!--
+		 <CodesignEntitlement>Platforms\iOS\Entitlements.plist</CodesignEntitlement> 
+		<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
+		<CodesignProvision>PAMobileSigning</CodesignProvision>
+	</PropertyGroup>-->
+
 	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
 		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
 		<!-- Only needed when you have a need for entitlements -->
-		 <CodesignEntitlement>Platforms\iOS\Entitlements.plist</CodesignEntitlement> 
+		<!-- <CodesignEntitlement>Entitlements.plist</CodesignEntitlement> -->
 		<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
 		<CodesignProvision>PAMobileSigning</CodesignProvision>
 	</PropertyGroup>
