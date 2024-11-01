@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PAMobile.Views.LoginPage"
+             xmlns:customControls="clr-namespace:PAMobile.Views.CustomControls"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Title="">
+    <Grid IsVisible="{Binding IsTechnicalWorks}" Margin="0, -5, 0, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <!--<Path Stroke="#fff" Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z"  
+              Fill="{x:StaticResource Red50}"/>-->
+
+        <Image Source="salym_logo_l.png" Grid.Row="0" Margin="20, 20, 20, 0"/>
+
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            Spacing="5"
+            Margin="20, 0, 20, 0"
+            Grid.Row="1">
+            <Label 
+                Text="Добро пожаловать!" 
+                HorizontalOptions="Center" 
+                FontSize="21"
+                Padding="0" 
+                Margin="0, 0, 0, 15"
+                VerticalOptions="Center"
+                FontFamily="MontserratBold"/>
+
+            <Button Text="Зарегистрироваться" VerticalOptions="Center" Background="{x:StaticResource SalymRed}"
+                FontFamily="MontserratRegular" FontSize="16" Command="{Binding RegisterCommand}"/>
+
+            <Label Text="Инструкция для регистрации" FontSize="17" HorizontalOptions="Center" 
+                FontFamily="MontserratSemiBold" Margin="0, 10, 0, 0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding InstructionCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Если у Вас имеется учетная запись - введите имя пользователя и пароль" FontSize="17" 
+                HorizontalOptions="Center" 
+                FontFamily="MontserratRegular" Margin="0, 10, 0, 0" HorizontalTextAlignment="Center">
+                
+            </Label>
+
+            <Border
+                Stroke="{x:StaticResource Red50}"
+                StrokeShape="RoundRectangle 10, 10, 10, 10"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Margin="5"
+                >
+                <StackLayout 
+                    Orientation="Horizontal"
+                    >
+                    <Border BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 40" 
+                            Padding="0" Margin="5 ">
+                        <Image Source="user_icon.png" Aspect="AspectFill"
+                            Margin="0"/>
+                    </Border>
+                    <customControls:CustomEntry 
+                        Text="{Binding UserName}" 
+                        Placeholder="Введите логин (ИНН)" 
+                        TextColor="{x:StaticResource Red50}" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand" 
+                        FontFamily="MontserratBold"
+                        Margin="0,0,20,0"/>
+                </StackLayout>
+            </Border>
+
+            <Border
+                Stroke="{x:StaticResource Red50}"
+                StrokeShape="RoundRectangle 10, 10, 10, 10"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Margin="5">
+                <StackLayout 
+                    Orientation="Horizontal"
+                    >
+                    <Border BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 40"
+                            Padding="0" Margin="5 ">
+                        <Image 
+                            Source="password_icon.png" Aspect="AspectFill"
+                            Margin="0"/>
+                    </Border>
+                    <customControls:CustomEntry 
+                        x:Name="passwordEntry"
+                        Text="{Binding Password}" 
+                        Placeholder="Введите пароль" 
+                        TextColor="{x:StaticResource Red50}" 
+                        FontFamily="MontserratBold"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand" 
+                        Margin="0,0,20,0"/>
+                    <Image Source="show_icon.png" WidthRequest="25" HeightRequest="25" Margin="0, 0, 10, 0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnShowPassword"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </Border>
+
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" Padding="0">
+                <!--<Label Text="Использовать биометрику" TextColor="#1d8348" FontSize="16" VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Center"
+                    FontFamily="RegularFont">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Command="{Binding FingerPrintCommand}"
+                            >
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>-->
+                <Label Text="Забыли пароль?" HorizontalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="16"
+                    FontFamily="MontserratBold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChangePassword}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+            <Button Text="Далее" BackgroundColor="{x:StaticResource Red50}" TextColor="White" FontAttributes="Bold" CornerRadius="10"
+                WidthRequest="200" Margin="0,15,0,0" FontFamily="MontserratRegular"
+                Command="{Binding LoginCommand}"/>
+
+
+        </VerticalStackLayout>
+
+        <ActivityIndicator
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            HeightRequest="70"
+            Color="{x:StaticResource Green45}"
+            WidthRequest="70"
+            Grid.RowSpan="3"
+            />
+    </Grid>
+</ContentPage>

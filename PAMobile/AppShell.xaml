@@ -4,12 +4,33 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PAMobile"
+    xmlns:views="clr-namespace:PAMobile.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="PAMobile">
+    Title="PAMobile"
+    Shell.BackgroundColor="{x:StaticResource SalymRed}">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="MainPage" 
+        Shell.NavBarIsVisible="False"/>
+
+    <TabBar>
+        <ShellContent
+            Icon="resized_home_icon.png"
+            Title="Меню"
+            ContentTemplate="{DataTemplate views:MainPage}"
+            Route="HomePage"
+            Shell.NavBarIsVisible="True"
+            />
+
+        <ShellContent
+            Title="Справочник"
+            Icon="resized_account_icon.png"
+            ContentTemplate="{DataTemplate views:AccountPage}"
+            Shell.NavBarIsVisible="False"
+            Route="AccountPage"
+            />
+    </TabBar>
 
 </Shell>

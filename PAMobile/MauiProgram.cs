@@ -23,10 +23,10 @@ public static class MauiProgram
                 fonts.AddFont("Montserrat-SemiBold.ttf", "MontserratSemiBold");
             });
 
-        //builder.Services.AddSingleton<LoginPage>();
+        builder.Services.AddSingleton<LoginPage>();
         //builder.Services.AddSingleton<FingerPrintConfirmPage>();
-        //builder.Services.AddSingleton<LoginViewModel>();
-        //builder.Services.AddSingleton<PinPage>();
+        builder.Services.AddSingleton<LoginViewModel>();
+        builder.Services.AddSingleton<PinPage>();
 
 #if DEBUG
         builder.Logging.AddDebug();
@@ -37,7 +37,7 @@ public static class MauiProgram
 
     public static MauiAppBuilder RegisterAppServices(this MauiAppBuilder mauiAppBuilder)
     {
-        //mauiAppBuilder.Services.AddSingleton<ContentService>();
+        mauiAppBuilder.Services.AddSingleton<ContentService>();
 
         return mauiAppBuilder;
     }
