@@ -98,8 +98,8 @@
 		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
 		<!-- Only needed when you have a need for entitlements -->
 		 <CodesignEntitlement>Platforms\iOS\Entitlements.plist</CodesignEntitlement> 
-		<!--<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
-		<CodesignProvision>PAMobileSigning</CodesignProvision>-->
+		<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
+		<CodesignProvision>PAMobileSigning</CodesignProvision>
 	</PropertyGroup>
 
 </Project>
