@@ -111,7 +111,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
-		<ProvisioningType>automatic</ProvisioningType>
+		<ProvisioningType>manual</ProvisioningType>
 		<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
 		<CodesignProvision>PAMobileSigning</CodesignProvision>
 	</PropertyGroup>
