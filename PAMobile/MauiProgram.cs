@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace PAMobile;
 
@@ -9,8 +10,9 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            //.UseMauiCommunityToolkit()
-            //.UseMauiCommunityToolkitMarkup()
+            .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkitMarkup()
+            .RegisterAppServices()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
