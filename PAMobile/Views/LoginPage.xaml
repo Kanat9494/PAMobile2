@@ -37,7 +37,7 @@
             <Button Text="Зарегистрироваться" VerticalOptions="Center" Background="{x:StaticResource SalymRed}"
                 FontFamily="MontserratRegular" FontSize="16" Command="{Binding RegisterCommand}" Margin="0, 15, 0, 0"/>
 
-            <Label Text="Инструкция для регистрации" FontSize="17" HorizontalOptions="Center" 
+            <Label Text="Инструкция для регистрации" FontSize="15" HorizontalOptions="Center" 
                 FontFamily="MontserratSemiBold" Margin="0, 5, 0, 15">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding InstructionCommand}"/>
