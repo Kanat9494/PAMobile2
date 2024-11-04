@@ -250,7 +250,7 @@
         </Border.GestureRecognizers>
     </Border>-->
 
-        <CollectionView ItemsSource="{Binding Ads}" Grid.Row="4" Margin="1, 0, 1, 0">
+        <CollectionView ItemsSource="{Binding Ads}" Grid.Row="4" Margin="1, 0, 1, 0" HorizontalScrollBarVisibility="Never">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Horizontal"/>
             </CollectionView.ItemsLayout>
@@ -268,13 +268,14 @@
                             <Image Source="{Binding Banner}" Aspect="Fill" WidthRequest="300"
                             HeightRequest="120" />
 
-                            <Border.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=AdCommand}"
-                                CommandParameter="{Binding AdId}"/>
-                            </Border.GestureRecognizers>
                         </Border>
 
                         <Label Text="" Margin="10, 0, 0, 0" WidthRequest="300"/>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=AdCommand}"
+CommandParameter="{Binding AdId}"/>
+                        </Grid.GestureRecognizers>
                     </Grid>
 
                 </DataTemplate>
@@ -283,118 +284,4 @@
 
     </Grid>
 
-    <!--<ScrollView VerticalScrollBarVisibility="Never">
-    <StackLayout Margin="0, -10, 0, 10">
-        
-
-        
-        <toolkit:Expander>
-            <toolkit:Expander.Header>
-                <Border StrokeThickness="0" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" 
-                Padding="15" Margin="10, 20, 10, 0">
-                    <StackLayout Orientation="Horizontal">
-                        <Label VerticalOptions="Center" HorizontalOptions="Start" Text="Заявления" FontSize="20"
-                        FontFamily="MontserratSemiBold"/>
-
-                        <Border HorizontalOptions="EndAndExpand" StrokeThickness="0" StrokeShape="RoundRectangle 35"
-                        BackgroundColor="{x:StaticResource White95}" HeightRequest="35" WidthRequest="35" Padding="8">
-                            <Image Source="next_icon.png" Aspect="AspectFill" />
-                        </Border>
-                    </StackLayout>
-                </Border>
-            </toolkit:Expander.Header>
-
-            <StackLayout Margin="10">
-                <toolkit:Expander>
-                    <toolkit:Expander.Header>
-                        <Border StrokeThickness="0" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" Padding="15" Margin="10, 0, 10, 10">
-                            <Label Text="Кредит" FontSize="20" FontFamily="MontserratSemiBold"/>
-                        </Border>
-                    </toolkit:Expander.Header>
-
-                    <VerticalStackLayout Margin="10">
-                        <Label Text="На изменение условий кредитного договора" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="1"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="На получение информации по кредиту" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="2"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="На выдачу транша" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="3"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="На выдачу документа по залогу" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="4"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="На выплату переплаты" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="5"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                    </VerticalStackLayout>
-                </toolkit:Expander>
-
-                <toolkit:Expander>
-                    <toolkit:Expander.Header>
-                        <Border StrokeThickness="0" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" Padding="15" Margin="10, 0, 10, 10" >
-                            <Label Text="Депозит" FontSize="20" FontFamily="MontserratSemiBold"/>
-                        </Border>
-                    </toolkit:Expander.Header>
-
-                    <VerticalStackLayout Margin="10">
-                        <Label Text="На выдачу части депозита" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="6"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="На перечисление депозита и %" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                CommandParameter="7"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="На расторжение договора" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                    CommandParameter="8"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                        <Label Text="О происхождении денежных средств" FontSize="17" Margin="10, 0, 10, 10" FontFamily="MontserratSemiBold">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}, Path=ReferenceDefinitionCommand}"
-                                    CommandParameter="9"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-
-                    </VerticalStackLayout>
-                </toolkit:Expander>
-            </StackLayout>
-        </toolkit:Expander>
-
-        
-
-        
-
-        -->
-    <!--<Label Text="Сторис" FontSize="18">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding StoriesCommand}"/>
-            </Label.GestureRecognizers>
-        </Label>-->
-    <!--
-    </StackLayout>
-</ScrollView>-->
 </ContentPage>
