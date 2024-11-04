@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
         <Image Source="bg_transparent.png" Aspect="AspectFill" Grid.RowSpan="7"/>
 
-        <Grid HorizontalOptions="Fill">
+        <Grid HorizontalOptions="FillAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80*"/>
                 <ColumnDefinition Width="10*"/>
