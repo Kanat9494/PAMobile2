@@ -34,7 +34,7 @@
             >
                 <Image.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="-13, 18, 0, 10"/>
+                        <On Platform="iOS" Value="-10, 18, 0, 10"/>
                         <On Platform="Android" Value="10, 18, 0, 10"/>
                     </OnPlatform>
                 </Image.Margin>
