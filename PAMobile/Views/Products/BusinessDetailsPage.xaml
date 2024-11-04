@@ -26,7 +26,7 @@
                     <ColumnDefinition Width="65*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="business_invest.png" Aspect="AspectFit" WidthRequest="70" HeightRequest="70" HorizontalOptions="End" Grid.Column="0"/>
-                <VerticalStackLayout Grid.Column="1">
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
                     <Label Text="Пополнения оборотных средств" VerticalOptions="Center" FontSize="17" FontFamily="MontserratRegular"
                         HorizontalOptions="Start"/>
                 </VerticalStackLayout>
@@ -38,8 +38,8 @@
                     <ColumnDefinition Width="65*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="business_vlozhenie.png" Aspect="AspectFit" WidthRequest="70" HeightRequest="70" HorizontalOptions="End" Grid.Column="0"/>
-                
-                <VerticalStackLayout Grid.Column="1">
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
                     <Label Text="Других капитальных вложений в бизнес" VerticalOptions="Center" FontSize="17" FontFamily="MontserratRegular"
                         HorizontalOptions="Start"/>
                 </VerticalStackLayout>
@@ -51,8 +51,8 @@
                     <ColumnDefinition Width="65*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="business_commercia.png" Aspect="AspectFit" WidthRequest="70" HeightRequest="70" HorizontalOptions="End" Grid.Column="0"/>
-                <VerticalStackLayout Grid.Column="1">
-                    <Label Text="Осуществления коммерческой деятельности" VerticalOptions="Start" FontSize="17" FontFamily="MontserratRegular"
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="Осуществления коммерческой деятельности" VerticalOptions="Center" FontSize="17" FontFamily="MontserratRegular"
                         HorizontalOptions="Start"/>
                 </VerticalStackLayout>
             </Grid>
@@ -70,7 +70,7 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="business_magnifier.png" Aspect="AspectFit" WidthRequest="70" HeightRequest="70" HorizontalOptions="End"/>
                 
-                <Label Text="Увеличения производства или объема оказываемых услуг" VerticalOptions="Start" FontSize="17" FontFamily="MontserratRegular"
+                <Label Text="Увеличения производства или объема оказываемых услуг" VerticalOptions="Center" FontSize="17" FontFamily="MontserratRegular"
                     HorizontalOptions="Start" Grid.Column="1"/>
             </Grid>
 
