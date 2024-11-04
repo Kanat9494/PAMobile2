@@ -31,7 +31,7 @@
             </Grid.ColumnDefinitions>
             <!--<Image Grid.Column="0" Margin="0, 18, 0, 10"  x:Name="imgLogo" HorizontalOptions="Start" Source="{AppThemeBinding Light=white_theme_logo.png, Dark=dark_theme_logo.png}"
 />-->
-            <Image Source="close.png" Grid.Column="0"/>
+            <Image Source="back_icon.png" Grid.Column="0"/>
 
             <Image Source="r_bell_icon" HeightRequest="40" WidthRequest="40" HorizontalOptions="End" Grid.Column="1" VerticalOptions="Center"
 Margin="0, 0, 10, 0">
