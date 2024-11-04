@@ -24,7 +24,7 @@
             HorizontalOptions="Center" 
             FontSize="21"
             Padding="0" 
-            Margin="0, 0, 0, 15"
+            Margin="0, 15, 0, 15"
             VerticalOptions="Start"
             FontFamily="MontserratBold"/>
 
