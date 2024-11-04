@@ -110,10 +110,10 @@
 		<CodesignProvision>PAMobileSigning</CodesignProvision>
 	</PropertyGroup>-->
 
-	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+	<!--<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 		<ProvisioningType>manual</ProvisioningType>
 		<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
 		<CodesignProvision>PAMobileSigning</CodesignProvision>
-	</PropertyGroup>
+	</PropertyGroup>-->
 
 </Project>
