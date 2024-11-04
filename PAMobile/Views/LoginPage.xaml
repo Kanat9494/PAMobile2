@@ -10,6 +10,7 @@
     <Grid IsVisible="{Binding IsTechnicalWorks}" Margin="0, -5, 0, 0">
         <Grid.RowDefinitions>
             <RowDefinition Height="30*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="65*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
@@ -17,7 +18,15 @@
         <!--<Path Stroke="#fff" Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z"  
               Fill="{x:StaticResource Red50}"/>-->
 
-        <Image Source="salym_logo_l.png" Grid.Row="0" Margin="20, 10, 20, 0" VerticalOptions="End"/>
+        <Image Source="salym_logo_l.png" Grid.Row="0" Margin="20, 10, 20, 0"/>
+        <Label Grid.Row="1"
+            Text="Добро пожаловать!" 
+            HorizontalOptions="Center" 
+            FontSize="21"
+            Padding="0" 
+            Margin="0, 0, 0, 15"
+            VerticalOptions="Start"
+            FontFamily="MontserratBold"/>
 
         <VerticalStackLayout
             VerticalOptions="CenterAndExpand"
@@ -25,14 +34,7 @@
             Margin="20, 0, 20, 0"
             Grid.Row="1"
             >
-            <Label 
-                Text="Добро пожаловать!" 
-                HorizontalOptions="Center" 
-                FontSize="21"
-                Padding="0" 
-                Margin="0, 0, 0, 15"
-                VerticalOptions="Start"
-                FontFamily="MontserratBold"/>
+            
 
             <Button Text="Зарегистрироваться" VerticalOptions="Center" Background="{x:StaticResource SalymRed}"
                 FontFamily="MontserratRegular" FontSize="16" Command="{Binding RegisterCommand}" Margin="0, 15, 0, 0"/>
