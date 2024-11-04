@@ -16,6 +16,10 @@ global using System.Text;
 global using Newtonsoft.Json;
 global using System.Net;
 global using PAMobile.Models.DTOs.Requests;
+global using PAMobile.Models;
+global using PAMobile.Views.Products;
+
+
 
 
 
