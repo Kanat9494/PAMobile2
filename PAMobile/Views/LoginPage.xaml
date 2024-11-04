@@ -17,7 +17,7 @@
         <!--<Path Stroke="#fff" Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z"  
               Fill="{x:StaticResource Red50}"/>-->
 
-        <Image Source="salym_logo_l.png" Grid.Row="0" Margin="20, 10, 20, 0"/>
+        <Image Source="salym_logo_l.png" Grid.Row="0" Margin="20, 10, 20, 0" VerticalOptions="End"/>
 
         <VerticalStackLayout
             VerticalOptions="CenterAndExpand"
