@@ -32,7 +32,7 @@
             VerticalOptions="CenterAndExpand"
             Spacing="5"
             Margin="20, 0, 20, 0"
-            Grid.Row="1"
+            Grid.Row="2"
             >
             
 
