@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
         <Image Source="bg_transparent.png" Aspect="AspectFill" Grid.RowSpan="7"/>
 
-        <Grid >
+        <Grid Background="Red">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80*"/>
                 <ColumnDefinition Width="10*"/>
