@@ -24,12 +24,12 @@
         </Grid.RowDefinitions>
         <Image Source="bg_transparent.png" Aspect="AspectFill" Grid.RowSpan="7"/>
 
-        <Grid Background="Red">
+        <Grid >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80*"/>
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Margin="-10, 18, 0, 10"  x:Name="imgLogo" HorizontalOptions="StartAndExpand" Source="{AppThemeBinding Light=white_theme_logo.png, Dark=dark_theme_logo.png}"
+            <Image Grid.Column="0" Margin="-20, 18, 0, 10"  x:Name="imgLogo" HorizontalOptions="StartAndExpand" Source="{AppThemeBinding Light=white_theme_logo.png, Dark=dark_theme_logo.png}"
                 />
             <!--<Image Source="white_theme_logo.png" Grid.Column="0" HorizontalOptions="Start"/>-->
 
