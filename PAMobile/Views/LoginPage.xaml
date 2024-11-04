@@ -23,14 +23,15 @@
             VerticalOptions="CenterAndExpand"
             Spacing="5"
             Margin="20, 0, 20, 0"
-            Grid.Row="1">
+            Grid.Row="1"
+            >
             <Label 
                 Text="Добро пожаловать!" 
                 HorizontalOptions="Center" 
                 FontSize="21"
                 Padding="0" 
                 Margin="0, 0, 0, 15"
-                VerticalOptions="Center"
+                VerticalOptions="Start"
                 FontFamily="MontserratBold"/>
 
             <Button Text="Зарегистрироваться" VerticalOptions="Center" Background="{x:StaticResource SalymRed}"
