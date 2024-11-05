@@ -129,6 +129,11 @@
 		<CodesignProvision>PAMobileSigning</CodesignProvision>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+	  <ProvisioningType>manual</ProvisioningType>
+	  <CodesignKey>Apple Development: Created via API (56R7W9S7G6)</CodesignKey>
+	</PropertyGroup>
+
 	<!--<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 		<ProvisioningType>manual</ProvisioningType>
 		<CodesignKey>Apple Distribution: SALYM FINANS, OAO (3JQSB73426)</CodesignKey>
