@@ -131,7 +131,7 @@
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 	  <ProvisioningType>manual</ProvisioningType>
-	  <CodesignKey>Apple Development: Created via API (56R7W9S7G6)</CodesignKey>
+	  <CodesignKey>iPhone Developer</CodesignKey>
 	</PropertyGroup>
 
 	<!--<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
